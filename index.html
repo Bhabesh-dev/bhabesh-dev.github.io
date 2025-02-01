@@ -3,61 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-        }
-        .project {
-            background-color: #fff;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <title>Your Name - Senior .NET Architect & Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>Web Developer | Designer | Programmer</p>
+        <div class="container">
+            <h1>Bhabesh Barik</h1>
+            <p>Senior .NET Architect | Full Stack Developer | Aspiring Solution Architect</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="container">
-        <section>
+
+    <main class="container">
+        <!-- About Section -->
+        <section id="about" class="about">
             <h2>About Me</h2>
-            <p>Write a short bio about yourself here.</p>
+            <p>
+                A highly experienced Senior .NET Architect and Full Stack Developer with over 15 years of expertise in designing, developing, and deploying scalable enterprise-level applications. Proven track record of leading cross-functional teams, architecting robust solutions, and delivering high-quality software. Aspiring to transition into a Solution Architect role to drive innovation and strategic technical decisions.
+            </p>
         </section>
-        <section>
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of your project.</p>
-                <a href="#">View Project</a>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>C#</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>TypeScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <ul>
+                        <li>.NET Core / .NET Framework</li>
+                        <li>ASP.NET MVC</li>
+                        <li>Entity Framework</li>
+                        <li>React.js</li>
+                        <li>Angular</li>
+                        <li>Spring</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <ul>
+                        <li>Azure (App Services, Functions, SQL DB)</li>
+                        <li>AWS (EC2, S3, Lambda)</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>CI/CD Pipelines (Azure DevOps, Jenkins,UCD, Harness)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>SQL Server</li>
+                        <li>PostgreSQL</li>
+                        <li>Oracle</li>
+                        <li>Redis</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Practices</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>Microservices Architecture</li>
+                        <li>RESTful APIs</li>
+                        <li>Agile & Scrum</li>
+                        <li>Domain-Driven Design (DDD)</li>
+                    </ul>
+                </div>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of your project.</p>
-                <a href="#">View Project</a>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="experience">
+            <h2>Professional Experience</h2>
+            <div class="job">
+                <h3>Lead Full Stack Developer</h3>
+                <p class="company">Wells Fargo | Hyderabad India | Jun 2021 - Present</p>
+                <ul>
+                    <li>Architected and implemented scalable microservices-based solutions using .NET Core , Python PCF , reducing system downtime by 30%.</li>
+                    <li>Led a team of 10 developers in designing and deploying enterprise-level applications, ensuring adherence to best practices and coding standards.</li>
+                    <li>Mentored junior developers and conducted code reviews to maintain high-quality deliverables.</li>
+                    <li>Collaborated with stakeholders to define technical requirements and translate them into actionable development plans.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Full Stack Developer</h3>
+                <p class="company">JP Morgan Chase |Hyderabad India| Jun 2018 - Jun 2021</p>
+                <ul>
+                    <li>Developed and maintained full-stack applications using .NET Core , Angular, and SQL Server, improving system performance by 25%.</li>
+                    <li>Designed and implemented RESTful APIs to integrate third-party services, enhancing application functionality.</li>
+                    <li>Automated deployment processes using Docker and Kubernetes, reducing deployment time by 40%.</li>
+                    <li>Worked closely with product managers to deliver features aligned with business goals.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Analyst</h3>
+                <p class="company">Bank Of America | Hyderabad India | Jun 2016 - Jun 2018</p>
+                <ul>
+                    <li>Built and maintained web applications using .NET Framework and SQL Server, ensuring high availability and scalability.</li>
+                    <li>Optimized database queries and improved application performance by 20%.</li>
+                    <li>Participated in Agile sprints and contributed to the development of new features and bug fixes.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Team Lead</h3>
+                <p class="company">Tekfriday Processing Solution | Hyderabad India | Sep 2013- Jun 2016</p>
+                <ul>
+                    <li>Built and maintained web applications using .NET Framework and SQL Server, ensuring high availability and scalability.</li>
+                   <li>Lead a team for 15 developer for an e-commerce applicato</li>
+                    <li>Participated in Agile sprints and contributed to the development of new features and bug fixes.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Senior Software Engineer</h3>
+                <p class="company">Mobiware INC | Hyderabad India | Dec 2012- Aug 2013</p>
+                <ul>
+                    <li>Built and maintained web applications using .NET Framework and SQL Server, ensuring high availability and scalability.</li>
+                    <li>Optimized database queries and improved application performance</li>
+                    <li>Participated in Agile sprints and contributed to the development of new features and bug fixes.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Software Engineer</h3>
+                <p class="company">Softnet Technoware | Bhubaneswar India | Apr 2010- Dec 2011</p>
+                <ul>
+                    <li>Built and maintained web applications using .NET Framework and SQL Server, ensuring high availability and scalability.</li>
+                   <li>Participated in Agile sprints and contributed to the development of new features and bug fixes.</li>
+                </ul>
             </div>
         </section>
-        <section>
-            <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>GitHub: <a href="https://github.com/username">username</a></p>
-        </section>
-    </div>
+    </main>
+
+    <!-- Contact Section -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Let's connect and discuss how I can contribute to your next project!</p>
+            <p>
+                Contact: <a href="mailto:bhabesh.barik77@outlook.com">bhabesh.barik77@outlook.com</a> |
+                LinkedIn: <a href="https://www.linkedin.com/in/bhabeshbarik/">Bhabesh Barik</a> |
+                GitHub: <a href="https://github.com/Bhabesh-dev">GitHub</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
