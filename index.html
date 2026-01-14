@@ -3,165 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Senior .NET Architect & Full Stack Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Bhabesh Barik | Solutions Architect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;    /* Deep Navy */
+            --secondary: #3b82f6;  /* Bright Azure Blue */
+            --bg: #f8fafc;         /* Light Gray/Blue background */
+            --text-main: #334155;
+            --text-light: #64748b;
+            --card-bg: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* --- Header / Hero Section --- */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--secondary);
+            margin-bottom: 1rem;
+            object-fit: cover;
+            background-color: #cbd5e1;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; font-weight: 800; letter-spacing: -0.5px; }
+        .role { color: var(--secondary); font-weight: 600; font-size: 1.2rem; margin-top: 5px; text-transform: uppercase; letter-spacing: 1px;}
+        .tagline { color: #94a3b8; font-size: 1.1rem; max-width: 700px; margin: 15px auto 0; }
+
+        .cta-buttons { margin-top: 2rem; }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+            margin: 0 10px;
+        }
+        .btn-primary { background: var(--secondary); color: white; box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4); }
+        .btn-outline { border: 2px solid rgba(255,255,255,0.2); color: white; }
+        .btn:hover { transform: translateY(-2px); }
+
+        /* --- Main Container --- */
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+        /* --- Section Styling --- */
+        section { margin-bottom: 4rem; }
+        h2 { 
+            font-size: 1.8rem; 
+            color: var(--primary); 
+            border-left: 5px solid var(--secondary); 
+            padding-left: 15px; 
+            margin-bottom: 25px; 
+        }
+
+        /* --- Skills Grid --- */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag {
+            background: #e2e8f0;
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .skill-tag.highlight { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+
+        /* --- Case Study Card --- */
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--secondary);
+            margin-bottom: 2rem;
+        }
+        .project-title { font-size: 1.4rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+        .project-meta { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem; font-style: italic;}
+        .project-metrics {
+            display: flex;
+            gap: 20px;
+            margin: 1.5rem 0;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            flex-wrap: wrap;
+        }
+        .metric { text-align: center; flex: 1; min-width: 120px; }
+        .metric-val { display: block; font-size: 1.4rem; font-weight: 800; color: var(--secondary); }
+        .metric-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-light); }
+
+        /* --- Certifications --- */
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .cert-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s;
+        }
+        .cert-card:hover { transform: translateY(-3px); border-color: var(--secondary); }
+        .cert-icon { font-size: 2rem; color: #0078D4; } /* Azure Blue */
+        
+        /* --- Footer --- */
+        footer { text-align: center; color: var(--text-light); border-top: 1px solid #e2e8f0; padding-top: 2rem; margin-top: 4rem; }
+        .social-links a { color: var(--text-main); font-size: 1.5rem; margin: 0 10px; transition: color 0.2s; }
+        .social-links a:hover { color: var(--secondary); }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .project-metrics { flex-direction: column; gap: 15px; }
+            .cert-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Bhabesh Barik</h1>
-            <p>Senior .NET Architect | Full Stack Developer | Aspiring Solution Architect</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+
+<header>
+    <h1>Bhabesh Barik</h1>
+    <div class="role">Engineering Leader & Solutions Architect</div>
+    <div class="tagline">16+ Years modernizing legacy financial systems into resilient, cloud-native ecosystems.</div>
+    
+    <div class="cta-buttons">
+        <a href="Bhabesh_Barik_Resume.pdf" download class="btn btn-primary"><i class="fas fa-file-download"></i> Download Resume</a>
+        <a href="https://linkedin.com/in/bhabesh-barik" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>Architectural Toolkit</h2>
+        <div class="skills-grid">
+            <span class="skill-tag highlight">Microservices</span>
+            <span class="skill-tag highlight">Event-Driven Architecture</span>
+            <span class="skill-tag highlight">Azure (AZ-204/104)</span>
+            <span class="skill-tag">Confluent Kafka</span>
+            <span class="skill-tag">OpenShift / K8s</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Apache Spark</span>
+            <span class="skill-tag">Apache Iceberg</span>
+            <span class="skill-tag">System Design</span>
+            <span class="skill-tag">Java Spring Boot</span>
+            <span class="skill-tag">CI/CD Automation</span>
         </div>
-    </header>
+    </section>
 
-    <main class="container">
-        <!-- About Section -->
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <p>
-                A highly experienced Senior .NET Architect and Full Stack Developer with over 15 years of expertise in designing, developing, and deploying scalable enterprise-level applications. Proven track record of leading cross-functional teams, architecting robust solutions, and delivering high-quality software. Aspiring to transition into a Solution Architect role to drive innovation and strategic technical decisions.
-            </p>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>TypeScript</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                    </ul>
+    <section>
+        <h2>Featured Architecture Projects</h2>
+        
+        <div class="project-card">
+            <div class="project-title">Legacy Monolith to OpenShift Migration</div>
+            <div class="project-meta">Context: Wells Fargo | Tech: Java, OpenShift, Docker, Splunk</div>
+            
+            <p><strong>The Challenge:</strong> A mission-critical payment system was running on legacy on-premise infrastructure, suffering from scaling bottlenecks during peak transaction windows.</p>
+            <p><strong>The Solution:</strong> Spearheaded the decoupling of the monolith into domain-driven microservices. Containerized the application layer using Docker and orchestrated deployment via OpenShift, enabling auto-scaling and self-healing capabilities.</p>
+            
+            <div class="project-metrics">
+                <div class="metric">
+                    <span class="metric-val">40%</span>
+                    <span class="metric-label">Scalability Boost</span>
                 </div>
-                <div class="skill-category">
-                    <h3>Frameworks & Libraries</h3>
-                    <ul>
-                        <li>.NET Core / .NET Framework</li>
-                        <li>ASP.NET MVC</li>
-                        <li>Entity Framework</li>
-                        <li>React.js</li>
-                        <li>Angular</li>
-                        <li>Spring</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud & DevOps</h3>
-                    <ul>
-                        <li>Azure (App Services, Functions, SQL DB)</li>
-                        <li>AWS (EC2, S3, Lambda)</li>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>CI/CD Pipelines (Azure DevOps, Jenkins,UCD, Harness)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>SQL Server</li>
-                        <li>PostgreSQL</li>
-                        <li>Oracle</li>
-                        <li>Redis</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Practices</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>Microservices Architecture</li>
-                        <li>RESTful APIs</li>
-                        <li>Agile & Scrum</li>
-                        <li>Domain-Driven Design (DDD)</li>
-                    </ul>
+                <div class="metric">
+                    <span class="metric-val">Zero</span>
+                    <span class="metric-label">Downtime Deploy</span>
                 </div>
             </div>
-        </section>
-
-        <!-- Work Experience Section -->
-        <section id="experience" class="experience">
-            <h2>Professional Experience</h2>
-            <div class="job">
-                <h3>Lead Full Stack Developer</h3>
-                <p class="company">Wells Fargo | Hyderabad India | Jun 2021 - Present</p>
-                <ul>
-                    <li>Architected and implemented scalable microservices-based solutions using .NET Core , Python PCF , reducing system downtime by 30%.</li>
-                    <li>Led a team of 10 developers in designing and deploying enterprise-level applications, ensuring adherence to best practices and coding standards.</li>
-                    <li>Mentored junior developers and conducted code reviews to maintain high-quality deliverables.</li>
-                    <li>Collaborated with stakeholders to define technical requirements and translate them into actionable development plans.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Full Stack Developer</h3>
-                <p class="company">JP Morgan Chase |Hyderabad India| Jun 2018 - Jun 2021</p>
-                <ul>
-                    <li>Developed and maintained full-stack applications using .NET Core , Angular, and SQL Server, improving system performance by 25%.</li>
-                    <li>Designed and implemented RESTful APIs to integrate third-party services, enhancing application functionality.</li>
-                    <li>Automated deployment processes using Docker and Kubernetes, reducing deployment time by 40%.</li>
-                    <li>Worked closely with product managers to deliver features aligned with business goals.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Analyst</h3>
-                <p class="company">Bank Of America | Hyderabad India | Jun 2016 - Jun 2018</p>
-                <ul>
-                    <li>Built and maintained web applications using .NET Framework and SQL Server, ensuring high availability and scalability.</li>
-                    <li>Optimized database queries and improved application performance by 20%.</li>
-                    <li>Participated in Agile sprints and contributed to the development of new features and bug fixes.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Team Lead</h3>
-                <p class="company">Tekfriday Processing Solution | Hyderabad India | Sep 2013- Jun 2016</p>
-                <ul>
-                    <li>Built and maintained web applications using .NET Framework and SQL Server, ensuring high availability and scalability.</li>
-                   <li>Lead a team for 15 developer for an e-commerce applicato</li>
-                    <li>Participated in Agile sprints and contributed to the development of new features and bug fixes.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Senior Software Engineer</h3>
-                <p class="company">Mobiware INC | Hyderabad India | Dec 2012- Aug 2013</p>
-                <ul>
-                    <li>Built and maintained web applications using .NET Framework and SQL Server, ensuring high availability and scalability.</li>
-                    <li>Optimized database queries and improved application performance</li>
-                    <li>Participated in Agile sprints and contributed to the development of new features and bug fixes.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Software Engineer</h3>
-                <p class="company">Softnet Technoware | Bhubaneswar India | Apr 2010- Dec 2011</p>
-                <ul>
-                    <li>Built and maintained web applications using .NET Framework and SQL Server, ensuring high availability and scalability.</li>
-                   <li>Participated in Agile sprints and contributed to the development of new features and bug fixes.</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <!-- Contact Section -->
-    <footer id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Let's connect and discuss how I can contribute to your next project!</p>
-            <p>
-                Contact: <a href="mailto:bhabesh.barik77@outlook.com">bhabesh.barik77@outlook.com</a> |
-                LinkedIn: <a href="https://www.linkedin.com/in/bhabeshbarik/">Bhabesh Barik</a> |
-                GitHub: <a href="https://github.com/Bhabesh-dev">GitHub</a>
-            </p>
         </div>
+
+        <div class="project-card">
+            <div class="project-title">Real-Time Event Streaming Platform</div>
+            <div class="project-meta">Context: Wells Fargo | Tech: Confluent Kafka, Redis, AWS S3</div>
+            
+            <p><strong>The Challenge:</strong> Financial data processing was reliant on overnight batch jobs, causing delays in fraud detection and reporting.</p>
+            <p><strong>The Solution:</strong> Architected a high-throughput event streaming backbone using Confluent Kafka. Implemented Redis for distributed caching to enable sub-millisecond data retrieval for downstream consumers.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">Enterprise Data Lakehouse Strategy</div>
+            <div class="project-meta">Context: Wells Fargo | Tech: Apache Spark, Apache Iceberg, AWS S3</div>
+            
+            <p><strong>The Challenge:</strong> The existing data warehouse was expensive to scale and struggled with petabyte-scale datasets required for modern analytics.</p>
+            <p><strong>The Solution:</strong> Designed a modern data processing layer using Apache Spark and Apache Iceberg. Integrated AWS S3 for cost-effective object storage, significantly reducing infrastructure costs while improving query performance for analytics teams.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">Batch Job to Microservices Transformation</div>
+            <div class="project-meta">Context: JPMorgan Chase | Tech: Java Microservices, Spring Boot, SQL Server</div>
+            
+            <p><strong>The Challenge:</strong> Critical business logic was trapped in rigid, legacy batch jobs that were difficult to maintain and debug.</p>
+            <p><strong>The Solution:</strong> Orchestrated the decomposition of batch processes into scalable, always-on Java Microservices. Modernized the database layer by optimizing complex SQL Server stored procedures, enhancing overall system agility.</p>
+             <div class="project-metrics">
+                <div class="metric">
+                    <span class="metric-val">High</span>
+                    <span class="metric-label">Agility Gain</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-val">Reduced</span>
+                    <span class="metric-label">Data Latency</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Certifications & Training</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <i class="fab fa-microsoft cert-icon"></i>
+                <div>
+                    <strong>Azure Developer Associate</strong>
+                    <div style="font-size: 0.85rem; color: #666;">AZ-204 Certified</div>
+                </div>
+            </div>
+            <div class="cert-card">
+                <i class="fab fa-microsoft cert-icon"></i>
+                <div>
+                    <strong>Azure Administrator</strong>
+                    <div style="font-size: 0.85rem; color: #666;">AZ-104 Certified</div>
+                </div>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-cloud cert-icon"></i>
+                <div>
+                    <strong>Azure Fundamentals</strong>
+                    <div style="font-size: 0.85rem; color: #666;">AZ-900 Certified</div>
+                </div>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-graduation-cap cert-icon" style="color: #4b5563;"></i>
+                <div>
+                    <strong>Professional Training</strong>
+                    <div style="font-size: 0.85rem; color: #666;">Cloud Architecture & Microservices Design</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Career Timeline</h2>
+        <div style="border-left: 2px solid #e2e8f0; padding-left: 20px; margin-left: 10px;">
+            <div style="margin-bottom: 20px;">
+                <strong>Wells Fargo</strong> <span style="color:#64748b">| Lead Developer & Acting Architect</span>
+                <div style="font-size: 0.9rem; color: #94a3b8;">2021 - Present</div>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <strong>JPMorgan Chase</strong> <span style="color:#64748b">| Software Developer</span>
+                <div style="font-size: 0.9rem; color: #94a3b8;">2018 - 2021</div>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <strong>Bank of America</strong> <span style="color:#64748b">| Analyst</span>
+                <div style="font-size: 0.9rem; color: #94a3b8;">2016 - 2018</div>
+            </div>
+            <div>
+                <strong>Early Career (Tekfriday / Mobiware / Softnet)</strong>
+                <div style="font-size: 0.9rem; color: #94a3b8;">2010 - 2016</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/bhabesh-barik"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:bhabesh.barik68@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="margin-top: 20px;">&copy; 2026 Bhabesh Barik. Hosted on GitHub Pages.</p>
     </footer>
+
+</div>
+
 </body>
 </html>
